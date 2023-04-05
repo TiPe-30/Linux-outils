@@ -6,5 +6,6 @@ pour pouvoir le tapper sans utiliser le ./ et se trouver dans le répertoire ad�
 ou vous vous trouvez dans l'arborescence des fichiers de votre distribution!
 
 L'installation de git afin d'installer le projet se fait de cette façon : apt install git 
-puis,
+
+
 git clone urlEnQuestion
