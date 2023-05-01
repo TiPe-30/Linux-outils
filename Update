@@ -6,8 +6,6 @@ echo "**************************************************************************
 sudo apt update
 sudo apt upgrade
 
-Upgradabl='apt list --upgradable'
-
 function Upgradable {
 for file in $($Upgradabl | awk -F'/' '{print $1}')
   do 
