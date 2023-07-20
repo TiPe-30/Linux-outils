@@ -6,7 +6,7 @@ echo "**************************************************************************
 sudo apt update
 for file in $(apt list --upgradable | cut -d '/' -f1)
   do 
-sudo apt install $file --upgrade
+sudo apt install -y $file --upgrade
 done
 
 for file in $(sudo apt update)
