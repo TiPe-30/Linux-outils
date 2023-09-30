@@ -2,7 +2,7 @@
 echo "***************************************************************************"
 echo "****************Bienvenue sur le script de mise a jour !*******************"
 echo "***************************************************************************"
-echo "\n"
+echo ""
 #on mets tous les packets a jour avec ce qui suit
 sudo apt update
 for file in $(apt list --upgradable | cut -d '/' -f1)
@@ -17,7 +17,7 @@ flatpak update -y
 sudo snap refresh
 #permet de retirer les anciennes dépendances devenue inutile de snap
 LANG=C snap list --all | awk '/disabled/{print $1, $3}' | while read snapname revision ; do sudo snap remove "$snapname" --revision="$revision" ; done
-echo "\n"
+echo ""
 echo "******************************************"
 echo "*****Fin du script de mise a jour !*******"  
 echo "******************************************"  
