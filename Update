@@ -10,7 +10,7 @@ for file in $(apt list --upgradable | cut -d '/' -f1)
 sudo apt install -y $file 
 done
 sudo apt dist-upgrade
-sudo apt autoremove --purge
+sudo apt autoremove --purge -y
 sudo apt autoclean
 sudo apt clean
 flatpak update -y
