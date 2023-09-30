@@ -6,19 +6,8 @@ echo "**************************************************************************
 sudo apt update
 for file in $(apt list --upgradable | cut -d '/' -f1)
   do 
-sudo apt install -y $file --upgrade
+sudo apt install -y $file 
 done
-
-for file in $(sudo apt update)
-  do 
-   if [[ $file = "apt list --upgradable" ]]
-    then     
-for file in $(apt list --upgradable | cut -d '/' -f1)
-  do 
-sudo apt install $file --upgrade
-done
-   fi
- done
 sudo apt dist-upgrade
 sudo apt autoremove --purge
 sudo apt autoclean
