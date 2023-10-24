@@ -13,10 +13,11 @@ sudo apt dist-upgrade
 sudo apt autoremove --purge -y
 sudo apt autoclean
 sudo apt clean
-flatpak update -y
-sudo snap refresh
+[[ -d /var/lib/flatpak ]] && flatpak update -y
+[[ -d /snap ]] && sudo snap refresh
 #permet de retirer les anciennes dépendances devenue inutile de snap
 LANG=C snap list --all | awk '/disabled/{print $1, $3}' | while read snapname revision ; do sudo snap remove "$snapname" --revision="$revision" ; done
+sudo apt purge ~c
 echo ""
 echo "******************************************"
 echo "*****Fin du script de mise a jour !*******"  
