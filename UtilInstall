@@ -1,0 +1,38 @@
+#!/bin/bash
+
+echo "Le compte rendu de l'installation se trouve dans votre homedir -> ~/Installation"
+exec 1> ~/Installation 2>&1 # on redirige l'erreur ainsi que la sortie standard vers un fichier texte pour toute l'exection du script
+
+sudo apt update
+sudo apt upgrade -y
+sudo apt autopurge 
+sudo apt clean
+sudo apt install git -y
+sudo apt install snap -y
+sudo apt install flatpak -y
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+sudo apt install cron -y 
+sudo apt install openssh-* -y 
+sudo apt install nmap -y # scanner un réseaux et savoir ce qui si passe et qui est connecté
+sudo apt install gcc -y # compilateur C
+sudo apt install g++ -y # compilateur C++
+sudo apt install openjdk-19-jdk -y # rechercher une autre version sinon
+sudo apt install net-tools # pour les utilitaires tels que netstat 
+sudo apt install samba samba-common-bin y
+sudo apt install dirsearch -y
+sudo apt install micro -y
+sudo apt install ncdu -y
+sudo apt install command-not-found -y
+
+
+# répertoire ou vont être mis les scripts
+git clone https://github.com/TiPe-30/Linux-outils.git
+echo "les scripts sont donc dans le répertoire Linux-outils"
+chmod 700 ~/Linux-outils/*
+sudo mv ~/Linux-outils/Update /bin/Update
+echo "La commande peut maintenant être lancé depuis le terminal en tapant le nom de la commande"
+echo "La commande Update sera très utile pour la mise a jour du système"
+
+chmod 700 ~/* && chmod 700 ~ # enlève les droits de la session aux autres utilisateur
+
+
