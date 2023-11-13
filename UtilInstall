@@ -12,6 +12,7 @@ sudo apt install snap -y
 sudo apt install flatpak -y
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sudo apt install cron -y 
+sudo apt install duf -y
 sudo apt install openssh-* -y 
 sudo apt install nmap -y # scanner un réseaux et savoir ce qui si passe et qui est connecté
 sudo apt install gcc -y # compilateur C
