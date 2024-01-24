@@ -32,6 +32,7 @@ echo "les scripts sont donc dans le répertoire Linux-outils"
 chmod 700 ~/Linux-outils/*
 sudo mv ~/Linux-outils/Update /bin/Update
 sudo mkdir /home/Backup
+sudo mkdir /home/Public
 echo "La commande peut maintenant être lancé depuis le terminal en tapant le nom de la commande"
 echo "La commande Update sera très utile pour la mise a jour du système"
 
