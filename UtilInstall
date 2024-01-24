@@ -30,7 +30,7 @@ sudo apt install command-not-found -y
 git clone https://github.com/TiPe-30/Linux-outils.git
 echo "les scripts sont donc dans le répertoire Linux-outils"
 chmod 700 ~/Linux-outils/*
-sudo mv ~/Linux-outils/Update /bin/Update
+sudo mv ~/Linux-outils/*.sh /bin/
 sudo mkdir /home/Backup
 sudo mkdir /home/Public
 echo "La commande peut maintenant être lancé depuis le terminal en tapant le nom de la commande"
