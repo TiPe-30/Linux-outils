@@ -7,7 +7,7 @@ echo ""
 sudo apt update
 for file in $(apt list --upgradable | cut -d '/' -f1)
   do 
-sudo apt install -y $file 
+sudo apt install -y $file 2> /dev/null
 done
 sudo apt dist-upgrade
 sudo apt autoremove --purge -y
