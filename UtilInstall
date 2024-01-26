@@ -10,6 +10,9 @@ sudo apt clean
 sudo apt install git -y
 sudo apt install snap -y
 sudo apt install flatpak -y
+sudo apt install python3.11 -y
+sudo apt install python3.11-dev -y
+sudo apt install python3.11-examples -y 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sudo apt install cron -y 
 sudo apt install duf -y
